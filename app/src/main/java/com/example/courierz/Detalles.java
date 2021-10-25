@@ -1,4 +1,5 @@
 package com.example.courierz;
 
-public class descrusuari {
+public class Detalles {
+
 }

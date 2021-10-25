@@ -1,21 +1,22 @@
 package com.example.courierz;
 
-public class modelousuario {
+public class User {
     private String Nombres;
     private String Apellidos;
     private String DNI;
     private String Tipo;
     private String Password;
 
-    public modelousuario(){}
+    public User(){}
 
-    public modelousuario(String nombres, String apellidos, String DNI, String tipo, String password){
-           Nombres = nombres;
-           Apellidos = apellidos;
-           this.DNI = DNI;
-           Tipo = tipo;
-           Password = password;
+    public User(String nombres, String apellidos, String DNI, String tipo, String password) {
+        Nombres = nombres;
+        Apellidos = apellidos;
+        this.DNI = DNI;
+        Tipo = tipo;
+        Password = password;
     }
+
     public String getNombres() {
         return Nombres;
     }

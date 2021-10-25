@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "439264664403",
+    "project_id": "courier-ae650",
+    "storage_bucket": "courier-ae650.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:439264664403:android:219ca8378b979f2b539fa6",
+        "android_client_info": {
+          "package_name": "com.example.courierz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "439264664403-mnd7s7m9hmmvh3h8hch0h4m6hkh50i9g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRb36wZux0qzGLJ7sWyc-oAVG1Mcjip3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "439264664403-mnd7s7m9hmmvh3h8hch0h4m6hkh50i9g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
