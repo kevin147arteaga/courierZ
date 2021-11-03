@@ -18,7 +18,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class menu extends AppCompatActivity {
+public class Menu extends AppCompatActivity {
     private FirebaseFirestore firebaseFirestore ;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -31,7 +31,6 @@ public class menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu);
-
         recyclerView = findViewById(R.id.orders_list);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
@@ -56,10 +55,10 @@ public class menu extends AppCompatActivity {
                                 String detalle = documentos.getData().get("Detalle").toString();
                                 String resultado = documentos.get("Resultado").toString();
 
-                                Order.add(new ordedetalle(contenido, fechaEntrega, ID_Order, lugarEntrega, receptor, precio,dni,detalle,resultado));
+                                Order.add(new ordedetalle (contenido, fechaEntrega, ID_Order, lugarEntrega, receptor, precio,dni,detalle,resultado));
                             }
 
-                            adapter = new OrderListAdapter(Order);
+                            adapter = new ordenlista(Order);
                             recyclerView.setAdapter(adapter);
                         }
                         else{
@@ -67,5 +66,6 @@ public class menu extends AppCompatActivity {
                         }
                     }
                 });
+
     }
 }

@@ -1,4 +1,4 @@
 package com.example.courierz;
 
-public class splsh {
+public class splsh  {
 }

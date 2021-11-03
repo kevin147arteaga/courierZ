@@ -13,25 +13,25 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class OrderListAdapter extends RecyclerView.Adapter<OrderListAdapter.OrderViewHolder> {
+public class ordenlista extends RecyclerView.Adapter<ordenlista.OrderViewHolder> {
     private List<ordedetalle> order;
 
-    public OrderListAdapter(List<ordedetalle> order) {
+    public ordenlista(List<ordedetalle> order) {
         this.order = order;
     }
 
     @NonNull
     @Override
-    public OrderListAdapter.OrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ordenlista.OrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View vista = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.orden, parent,false);
 
-        OrderViewHolder OrderViewHolder = new OrderListAdapter.OrderViewHolder(vista);
+        OrderViewHolder OrderViewHolder = new ordenlista.OrderViewHolder(vista);
         return OrderViewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull OrderListAdapter.OrderViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ordenlista.OrderViewHolder holder, int position) {
         holder.myText1.setText(order.get(position).getLugarEntrega());
         holder.myText2.setText(order.get(position).getID_Order());
         holder.setOnClickListener();

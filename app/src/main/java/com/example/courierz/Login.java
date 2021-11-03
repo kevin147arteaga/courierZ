@@ -29,9 +29,10 @@ public class Login extends AppCompatActivity {
         ingresar= findViewById(R.id.ingresar);
         id = findViewById(R.id.Dni_et);
         password = findViewById(R.id.Password_et);
+        firebaseFirestore = FirebaseFirestore.getInstance();
         ingresar.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 firebaseFirestore.collection("User").get()
                         .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                             @Override
@@ -48,9 +49,7 @@ public class Login extends AppCompatActivity {
                                             User_password = pass;
                                             String verification = Verificacion(User_password, password.getText().toString());
                                             if (verification.equals("OK")) {
-                                                Intent intent = new Intent(Login.this, menu.class);
-                                                startActivity(intent);
-                                                finish();
+                                                redirect(v);
                                             } else {
                                                 Toast.makeText(Login.this, "Password Incorrecto", Toast.LENGTH_SHORT).show();
                                             }
@@ -70,8 +69,12 @@ public class Login extends AppCompatActivity {
 }
 
     public void redirect(View v) {
-        Intent intent = new Intent(Login.this, menu.class);
+        Intent intent = new Intent(Login.this, Menu.class);
         Bundle DNI = new Bundle();
+        id = findViewById(R.id.Dni_et);
+        String datos = id.getText().toString();
+        DNI.putString("dni",datos);
+        intent.putExtras(DNI);
         startActivity(intent);
         finish();
     }
